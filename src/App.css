@@ -1,38 +1,104 @@
+body {
+  background-image: url("./Assets/bg.png");
+  font-family: monospace;
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 .App {
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.crousel {
+  padding: 2%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.leaderboard {
+  background-image: url("./Assets/bg3.png");
+  background-size: cover;
+
+  color: white;
+  padding: 4%;
+  padding-bottom: 20%;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.text-head {
+
+  text-shadow: 2px 2px red;
+}
+
+.text {
+
+  color: white;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.form {
+  text-align: left;
+  background-image: url("./Assets/bg1.png");
+  padding: 6%;
+  background-size: cover;
+}
+
+h5 {
+  text-shadow: 2px 2px black;
+}
+
+.about {
+  text-align: left;
+  background-image: url("./Assets/bg4.png");
+  padding: 6%;
+  background-size: cover;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.center {
+  text-align: center;
+  text-shadow: 2px 2px red;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-field {
+  width: 300px;
 }
+
+.about-text {
+  padding-left: 50%;
+}
+
+.footer__copyright {
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 12px;
+}
+
+.footer__socials {
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.footer__socials a {
+  background: var(--color-bg);
+  color: white;
+  padding: 0.8rem;
+  border-radius: 0.7rem;
+  display: flex;
+  border: 1px solid transparent;
+}
+
+.footer__socials a:hover {
+  background: transparent;
+  color: white;
+  border-color: var(--color-bg);
+}
+
