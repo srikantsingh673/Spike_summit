@@ -21,6 +21,7 @@ const Body = () => {
     const [secondIGN, setsecondIGN] = useState('');
     const [thirdIGN, setthirdIGN] = useState('');
     const [forthIGN, setforthIGN] = useState('');
+    const [peakrank, setpeakrank] = useState('');
 
     // Submit Event
     const handleSubmit = (e) => {
@@ -35,10 +36,12 @@ const Body = () => {
             Second_Player_IGN: secondIGN,
             Third_Player_IGN: thirdIGN,
             Forth_Player_IGN: forthIGN,
+            Peak_Rank: peakrank
         }
 
         axios.post('https://sheet.best/api/sheets/0edb8c59-5d56-469d-8716-1ed6c74f3264', data).then((response) => {
             console.log(response);
+            alert(" You have successfully Registered ")
             setTname('')
             setMobile('')
             setTLname('')
@@ -47,7 +50,8 @@ const Body = () => {
             setsecondIGN('')
             setthirdIGN('')
             setforthIGN('')
-            alert(" You have successfully Registered ")
+            setpeakrank('')
+            
         })
     }
 
@@ -156,7 +160,11 @@ const Body = () => {
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Player-4</Form.Label>
-                                    <Form.Control type="forthIGNforthIGN" placeholder="In-Game Name and Player Tag" onChange={(e) => setforthIGN(e.target.value)} value={forthIGN} />
+                                    <Form.Control type="forthIGN" placeholder="In-Game Name and Player Tag" onChange={(e) => setforthIGN(e.target.value)} value={forthIGN} />
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="formBasicEmail">
+                                    <Form.Label>Peak Rank</Form.Label>
+                                    <Form.Control type="peakrank" onChange={(e) => setpeakrank(e.target.value)} value={peakrank} />
                                 </Form.Group><br /><br />
                                 <Button variant="primary" type="submit" >
                                     Submit
